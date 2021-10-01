@@ -36,11 +36,6 @@
                         <div class="page-post__info">
                             {!!$tintuc->NoiDung!!}
                         </div>
-                        <div class="page-post__action">
-                            <a href="tintuc/{{$tintuc->id}}/{{$tintuc->	TieuDeKhongDau}}.html"><i
-                                    class="fas fa-arrow-left"></i>Next</a>
-                            <a href="">Prev<i class="fas fa-arrow-right"></i></a>
-                        </div>
                         <div class="user-comment">
                             @foreach($tintuc->comment as $cm)
                             <div class="user-comment__item">
@@ -108,7 +103,6 @@
                                 <ul>
                                     <li class="sidebar-tabs__link active">Thẻ</li>
                                     <li class="sidebar-tabs__link">Tin liên quan</li>
-                                    <li class="sidebar-tabs__link">Bình luận</li>
                                 </ul>
                             </div>
                             <div class="sidebar-tabs__content">
@@ -147,7 +141,7 @@
                         </div>
                         <!-- calendar  -->
                         <div class="sidebar-calendar">
-                            <p class="sidebar-heading">CALENDAR</p>
+                            <p class="sidebar-heading">Lịch</p>
                             <div class="calendar" id="table">
                                 <table id="calendar">
                                     <tr class="weekends">
@@ -223,18 +217,19 @@
                                 <div class="categories__icon">
                                     <i class="far fa-angle-down"></i>
                                 </div>
-                                <select name="" id="" class="categories__select">
-                                    <option value="0" selected>
-                                        <span>Chọn thể loại</span>
+                                <select class="categories__select" onchange="location = this.value;">
+                                    <option selected disabled hidden>
+                                        <span> Chọn thể loại</span>
                                     </option>
                                     @foreach($theloai as $tl)
-                                    <option value="1">{{$tl->Ten}}</option>
+                                    <option value="theloai/{{$tl->id}}/{{$tl->TenKhongDau}}.html">{{$tl->Ten}}</option>
                                     @endforeach
                                 </select>
                             </form>
                         </div>
                     </div>
                 </div>
+
                 <!-- end  -->
             </div>
         </div>

@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+use phpDocumentor\Reflection\Location;
+
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -23,6 +25,10 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__.'/../vendor/autoload.php';
 
+// if($_SERVER['REQUEST_URI'] == '/news_doan/public/'){
+//     echo "<script>window.location = 'trangchu'</script>";
+// }
+
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights
@@ -36,7 +42,6 @@ require __DIR__.'/../vendor/autoload.php';
 */
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
-
 /*
 |--------------------------------------------------------------------------
 | Run The Application

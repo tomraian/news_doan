@@ -26,7 +26,6 @@
                 <ul>
                     <li class="sidebar-tabs__link active">Thẻ</li>
                     <li class="sidebar-tabs__link">Tin liên quan</li>
-                    <li class="sidebar-tabs__link">Bình luận</li>
                 </ul>
             </div>
             <div class="sidebar-tabs__content">
@@ -49,7 +48,7 @@
         </div>
         <!-- calendar  -->
         <div class="sidebar-calendar">
-            <p class="sidebar-heading">CALENDAR</p>
+            <p class="sidebar-heading">Lịch</p>
             <div class="calendar" id="table">
                 <table id="calendar">
                     <tr class="weekends">
